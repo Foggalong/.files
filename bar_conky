@@ -1,0 +1,56 @@
+# Header
+# ------
+# An original conky configuration file. It originally started as the one that comes default
+# with #!10 but I'm not sure there's a single line that's the same anymore. The idea is that
+# it starts in a bar at the top of the screen where the title bar of the windows normally go.
+# It's specifically configured for my 1280x1024 monitor and so to get it working at other
+# resolutions will require changing all the ${goto 170} numbers accordingly. It's also configured
+# to say that any wired network it connects to is called HORNET, so just change that to a
+# name of your liking.
+
+# Because the two output lines are incredibly long (no newlines as to keep the bar shape) I
+# can put a part by part breakdown if required. Just file an issue and I'll get around to it.
+# ------------------------------------------------------------------------------------------------
+
+# Options
+# -------
+# XFT
+use_xft yes
+xftfont DejaVu Sans Mono:size=8
+aftalpha 0.8
+text_buffer_size 2048
+
+# Update Intervals
+update_interval 1
+total_run_times 0
+
+# Window Creation
+own_window yes
+own_window_transparent no
+own_window_colour 2d2d2d
+own_window_type desktop
+own_window_hints undecorated,below,sticky,skip_taskbar,skip_pager
+
+# Window Configuration
+double_buffer yes
+draw_shades no
+draw_outline no
+draw_borders no
+stripped_borders 
+border_margin 0
+border_width 1
+gap_x 0
+gap_y 0
+alignment top_left
+minimum_size 1680 0
+use_spacer left
+
+# Alternate OS identifier
+# lsb_release -d | cut -f 2| tr "[:upper:]" "[:lower:]"
+# ------------------------------------------------------------------------------------------------
+
+# Output
+# ------
+TEXT
+${image ~/.icons/conky.png -p -1,0 -s 1600x27}${offset 3}${voffset 1}${color 8f8f8f}System: ${color eeeeee}${pre_exec lsb_release -d | cut -f 2}${goto 170}${color 8f8f8f}Host Device: ${color eeeeee}${nodename}${goto 310}${color 8f8f8f}CPU1 ${color eeeeee}${cpubar 8,20 cpu} ${cpu cpu0}%${goto 410}${color 8f8f8f}CPU2 ${color eeeeee}${cpubar 8,20 cpu1} ${cpu cpu1}%${goto 510}${color 8f8f8f}RAM:${goto 545}${color eeeeee}${mem}/${memmax}${goto 645}${membar 8,20}${goto 700}${color 8f8f8f}HDD: ${color eeeeee}${fs_used /}/${fs_size /}${goto 850}${color 8f8f8f}Network:${goto 930}${color eeeeee}${if_match "${addr eth0}"!="No Address"}HORNET${goto 1000}${color 8f8f8f}Signal:${goto 1060}${color eeeeee}N/A${goto 1170}${color 8f8f8f}Up:${goto 1210}${color eeeeee}${upspeed eth0}${else}${if_match "${addr wlan0}"!="No Address"}${wireless_essid wlan0}${goto 1000}${color 8f8f8f}Signal:${goto 1042}${color eeeeee}${wireless_link_qual_perc wlan0}% ${wireless_link_bar 8,54 wlan0}${goto 1170}${color 8f8f8f}Up:${goto 1210}${color eeeeee}${upspeed wlan0}${else}Not Connected${endif}${endif}
+${offset 3}${color 8f8f8f}Kernel: ${color eeeeee}${kernel}${goto 170}${color 8f8f8f}Uptime: ${color eeeeee}${uptime}${goto 310}${color 8f8f8f}CPU3 ${color eeeeee}${cpubar 8,20 cpu2} ${cpu cpu2}%${goto 410}${color 8f8f8f}CPU4 ${color eeeeee}${cpubar 8,20 cpu3} ${cpu cpu3}%${goto 510}${color 8f8f8f}Swap:${goto 545}${color eeeeee}${swap}/${swapmax}${goto 645}${swapbar 8,20}${goto 700}${fs_bar 8,119 /}${goto 850}${color 8f8f8f}Connection:${goto 930}${color eeeeee}${if_match "${addr eth0}"!="No Address"}Wired${goto 1000}${color 8f8f8f}Local IP:${goto 1060}${color eeeeee}${addr eth0}${goto 1170}${color 8f8f8f}Down:${goto 1210}${color eeeeee}${downspeed eth0}${else}${if_match "${addr wlan0}"!="No Address"}Wireless${goto 1000}${color 8f8f8f}Local IP:${goto 1060}${color eeeeee}${addr wlan0}${goto 1170}${color 8f8f8f}Down:${goto 1210}${color eeeeee}${downspeed wlan0}${else}N/A${endif}${endif}
