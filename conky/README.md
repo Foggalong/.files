@@ -1,7 +1,7 @@
 Conky
 =====
 
-An original conky configuration file. It originally started as the one that comes default with #!10 but I'm not sure there's a single line that's the same anymore. The idea is that it starts in a bar at the top of the screen where the title bar of the windows normally go. It's programmed to be ran from the ~/.config/conky/ directory and will not work unless that's where all these files are located.
+An original conky configuration file. It originally started as the one that comes default with #!10 but I'm not sure there's a single line that's the same anymore. The idea is that it starts in a bar at the top of the screen where the title bar of the windows normally go. It's programmed to be ran from the ~/.config/conky/ directory and will not work unless that's where all these files are located. The start up command is then 'conky --config="$HOME/.config/conky/.bar_conkyrc"'.
 
 It's specifically configured for my 1280x1024 monitor and so to get it working at other resolutions will require changing all the ${goto 170} numbers accordingly. It's also configured to say that any wired network it connects to is called HORNET, so just change that to a name of your liking.
 
