@@ -19,7 +19,7 @@ if [[ "$used" > "$limit" ]]
 		echo "\${color d64937}"
 else
 	# Color white
-	echo "\${color 8f8f8f}"
+	echo "\${color eeeeee}"
 fi
 
 exit 0
