@@ -1,0 +1,73 @@
+# Header
+# ------
+# An original conky configuration file. This is based on my bar_conky file, adapted for
+# enviroments that don't suit the bar conky. It's configured to say that any wired
+# network it connects to is called HORNET, so just change that to a name of your liking.
+# ---------------------------------------------------------------------------------------
+
+# Options
+# -------
+# XFT
+use_xft yes
+xftfont DejaVu Sans Mono:size=8
+aftalpha 0.8
+text_buffer_size 2048
+
+# Update Intervals
+update_interval 1
+total_run_times 0
+
+# Window Creation
+own_window yes
+own_window_transparent no
+own_window_colour 2d2d2d
+own_window_type desktop
+own_window_hints undecorated,below,sticky,skip_taskbar,skip_pager
+
+# Window Configuration
+double_buffer yes
+draw_shades no
+draw_outline no
+draw_borders no
+stripped_borders
+border_margin 0
+border_width 1
+gap_x 30
+gap_y 30
+alignment top_left
+minimum_size 180 0
+use_spacer left
+
+# Alternate OS identifier
+# lsb_release -d | cut -f 2| tr "[:upper:]" "[:lower:]"
+# ---------------------------------------------------------------------------------------
+
+
+# Output
+# ------
+TEXT
+${color 858585}System: ${color dedede}${pre_exec lsb_release -d | cut -f 2}
+${color 858585}Host Device: ${color dedede}${nodename}
+${color 858585}Kernel: ${color dedede}${kernel}${goto 170}
+${color 858585}Uptime: ${color dedede}${uptime}
+$hr
+${color 858585}CPU1 ${if_match ${cpu cpu1} > 80}${color d64937}${else}${color dedede}${endif}${cpubar cpu1 8,20 } ${cpu cpu1}%${goto 100}${color 858585}CPU2 ${if_match ${cpu cpu2} > 80}${color d64937}${else}${color dedede}${endif}${cpubar cpu2 8,20} ${cpu cpu2}%
+${color 858585}CPU3 ${if_match ${cpu cpu3} > 80}${color d64937}${else}${color dedede}${endif}${cpubar cpu3 8,20} ${cpu cpu3}%${goto 100}${color 858585}CPU4 ${if_match ${cpu cpu4} > 80}${color d64937}${else}${color dedede}${endif}${cpubar cpu4 8,20} ${cpu cpu4}%
+$hr
+${color 858585}RAM: ${goto 60}${if_match ${memperc} > 80}${color d64937}${else}${color dedede}${endif}${mem}/${memmax} ${membar 8,20}
+${color 858585}Swap: ${goto 60}${if_match ${swapperc} > 80}${color d64937}${else}${color dedede}${endif}${swap}/${swapmax} ${swapbar 8,20}
+$hr
+${color 858585}HDD: ${goto 90}${if_match ${fs_used_perc} > 80}${color d64937}${else}${color dedede}${endif}${fs_used /}/${fs_size /}
+${if_match ${fs_used_perc} > 80}${color d64937}${else}${color dedede}${endif}${fs_bar 8,175 /}
+$hr
+${color 858585}Network: ${color dedede}${if_match "${addr eth0}"!="No Address"}HORNET
+${color 858585}Connection: ${goto 110}Wired
+${color 858585}Local IP: ${goto 100}${color dedede}${addr eth0}
+${color 858585}Signal: ${goto 80}${color dedede}N/A
+${color 858585}Up: ${goto 110}${color dedede}${upspeed eth0}
+${color 858585}Down: ${goto 110}${color dedede}${downspeed eth0}${else}${if_match "${addr wlan0}"!="No Address"}${wireless_essid wlan0}
+${color 858585}Connection: ${goto 110}${color dedede}Wireless
+${color 858585}Local IP: ${goto 100}${color dedede}${addr wlan0}
+${color 858585}Signal: ${goto 80}${color dedede}${wireless_link_qual_perc wlan0}% ${wireless_link_bar 8,54 wlan0}
+${color 858585}Up: ${goto 110}${color dedede}${upspeed wlan0}
+${color 858585}Down: ${goto 110}${color dedede}${downspeed wlan0}${else}Not Connected${endif}${endif}
