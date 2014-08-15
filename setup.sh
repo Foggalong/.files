@@ -25,6 +25,10 @@ apt-get update
 apt-get install firefox
 apt-get upgrade
 
+# Installs email
+apt-get install thunderbird
+apt-get remove geary
+
 # Installs ownCloud client
 wget http://launchpadlibrarian.net/161423097/libowncloudsync0_1.5.0%2Bdfsg-4ubuntu1_amd64.deb
 wget http://launchpadlibrarian.net/161423098/owncloud-client-cmd_1.5.0%2Bdfsg-4ubuntu1_amd64.deb
