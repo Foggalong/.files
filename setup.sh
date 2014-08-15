@@ -15,6 +15,11 @@ apt-get autoremove
 # Checks 'wget' is installed
 apt-get install wget
 
+# Installs plank
+add-apt-repository ppa:ricotz/docky
+apt-get update
+apt-get install plank
+
 # Installs browsers
 apt-get install links midori
 wget http://deb.opera.com/opera-developer/pool/non-free/o/opera-developer/opera-developer_25.0.1592.0_amd64.deb
@@ -49,13 +54,48 @@ git config --global user.email "joshua.h.fogg@gmail.com"
 git config --global credential.helper cache
 git config --global credential.helper 'cache --timeout=14400'
 
-# Installs terminator
+# Installs terminal
 apt-get install terminator
 
 # Installs office
 apt-get install libreoffice
 apt-get remove abiword
 apt-get remove gnumeric
+
+# Installs music
+apt-get install rhythmbox
+apt-get remove gmusicbrowser
+
+# Installs video
+apt-get install vlc
+apt-get remove mplayer
+apt-get remove parole
+add-apt-repository ppa:mc3man/trusty-media
+apt-get update
+apt-get install gstreamer0.10-ffmpeg
+# install minitube-ubuntu from usc
+
+# Installs chat
+apt-get install pidgin
+apt-get install hexchat
+apt-get remove empathy
+apt-get remove xchat
+
+# Installs torrent
+apt-get install transmission-gtk
+
+# Installs maths stuff
+apt-get install texmaker
+apt-get install octave
+apt-get install stellarium
+apt-get install gperiodic
+apt-get install geogebra
+
+# Allsorted
+apt-get install tellico
+apt-get install tint
+apt-get install ppa-purge
+apt-get install gdebi
 
 # Installs Steam
 wget http://media.steampowered.com/client/installer/steam.deb
