@@ -86,8 +86,36 @@ apt-get install hexchat
 apt-get remove empathy
 apt-get remove xchat
 
+# Install text editors
+apt-get install mousepad
+apt-get install vim
+add-apt-repository ppa:webupd8team/sublime-text-3
+apt-get update
+apt-get install sublime-text-installer
+vim /opt/sublime_text/sublime_text
+# Run the following in vim
+# :%!xxd
+# :%s/7001 0000 8a9b b800 0000 e87f 3f00 0048/7001 0000 90b3 0190 9090 e87f 3f00 0048/
+# :%!xxd -r
+# :wq
+# Paste the following into the license box
+# - BEGIN LICENSE -
+# Sinosky
+# Unlimited User License
+# EA7E-17525
+# C14974DF6829CA02CA9C0D9D53ED6D17
+# 0B753302A37BA6997616AC6A88FF69C8
+# E62B834C8250634C2A7E5E5D0BE3A284
+# 756FD4E2B4FEAC1775868B78E8ACC70C
+# F7AA16FF7894A0E3F6B1DBCA940D20A6
+# 3C86FC4CB4EFE4B55FC65846AB8C129F
+# EF9EBEA0476ECAD25CDE43FB6EB3F211
+# 497120783280FAE7DFA8CEAB405EFECD
+# - END LICENSE -
+
 # Installs torrent
 apt-get install transmission-gtk
+mkdir /home/josh/Downloads/Torrents
 
 # Installs maths stuff
 apt-get install texmaker
@@ -177,3 +205,31 @@ git clone https://github.com/NitruxSA/flattr-icons.git
 ln -s -r flattr-icons /usr/share/icons
 cd ../
 cd ../
+
+# Sets up GTK
+add-apt-repository ppa:numix/ppa
+apt-get update
+apt-get install numix-gtk-theme
+
+# Icons tools
+apt-get install numix-tools
+apt-get install librsvg2-2
+apt-get install librsvg2-bin
+apt-get install librsvg2-common
+apt-get install librsvg2-doc
+apt-get install python-rsvg
+add-apt-repository ppa:svg-cleaner-team/svgcleaner
+apt-get update
+apt-get install svgcleaner
+apt-get install inkscape
+apt-get install gimp
+apt-get install mtpaint
+
+# Sets up .files
+apt-get install conky
+cd /home/josh/
+git clone https://github.com/Foggalong/.files.git
+ln -s .files/conkyrc .conkyrc
+ln -s .files/bashrc .bashrc
+source ~/.bashrc
+full-upgrade
