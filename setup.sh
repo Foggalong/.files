@@ -16,6 +16,15 @@ apt-get autoremove
 apt-get install xinit
 apt-get install i3
 
+# Installs audio
+apt-get install alsa-base
+apt-get install alsa-utils
+apt-get install alsa-oss
+apt-get install gstreamer0.10-alsa
+apt-get install libasound2
+apt-get install libasound2-plugins
+alsactl init
+
 # Checks 'wget' is installed
 apt-get install wget
 
