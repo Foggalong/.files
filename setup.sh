@@ -12,18 +12,22 @@ apt-get upgrade
 apt-get dist-upgrade
 apt-get autoremove
 
+# Installs i3
+apt-get install xinit
+apt-get install i3
+
 # Checks 'wget' is installed
 apt-get install wget
 
 # Installs plank
-add-apt-repository ppa:ricotz/docky
-apt-get update
-apt-get install plank
+# add-apt-repository ppa:ricotz/docky
+# apt-get update
+# apt-get install plank
 
 # Updates whisker menu
-add-apt-repository ppa:gottcode/gcppa
-apt-get update
-apt-get install xfce4-whiskermenu-plugin
+# add-apt-repository ppa:gottcode/gcppa
+# apt-get update
+# apt-get install xfce4-whiskermenu-plugin
 
 # Installs browsers
 apt-get install links midori
