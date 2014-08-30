@@ -39,7 +39,7 @@ apt-get install wget
 # apt-get install xfce4-whiskermenu-plugin
 
 # Installs browsers
-apt-get install links midori
+apt-get install links
 wget http://deb.opera.com/opera-developer/pool/non-free/o/opera-developer/opera-developer_25.0.1592.0_amd64.deb
 dpkg -i opera-developer_25.0.1592.0_amd64.deb && apt-get -f install
 rm *.deb
@@ -50,20 +50,9 @@ apt-get upgrade
 
 # Installs email
 apt-get install thunderbird
-apt-get remove geary
 
 # Installs ownCloud client
-wget http://launchpadlibrarian.net/161423097/libowncloudsync0_1.5.0%2Bdfsg-4ubuntu1_amd64.deb
-wget http://launchpadlibrarian.net/161423098/owncloud-client-cmd_1.5.0%2Bdfsg-4ubuntu1_amd64.deb
-wget http://launchpadlibrarian.net/161423096/owncloud-client_1.5.0%2Bdfsg-4ubuntu1_amd64.deb
-wget http://launchpadlibrarian.net/161423385/owncloud-client-doc_1.5.0%2Bdfsg-4ubuntu1_all.deb
-wget http://launchpadlibrarian.net/161423388/owncloud-client-l10n_1.5.0%2Bdfsg-4ubuntu1_all.deb
-dpkg -i owncloud-client-l10n_1.5.0+dfsg-4ubuntu1_all.deb && apt-get -f install
-dpkg -i libowncloudsync0_1.5.0+dfsg-4ubuntu1_amd64.deb && apt-get -f install
-dpkg -i owncloud-client-doc_1.5.0+dfsg-4ubuntu1_all.deb && apt-get -f install
-dpkg -i owncloud-client_1.5.0+dfsg-4ubuntu1_amd64.deb && apt-get -f install
-dpkg -i owncloud-client-cmd_1.5.0+dfsg-4ubuntu1_amd64.deb && apt-get -f install
-rm *.deb
+apt-get install owncloud-client
 
 # Install and configure git
 apt-get install git
@@ -77,17 +66,14 @@ apt-get install terminator
 
 # Installs office
 apt-get install libreoffice
-apt-get remove abiword
-apt-get remove gnumeric
+apt-get install myspell-en-gb
 
 # Installs music
 apt-get install rhythmbox
-apt-get remove gmusicbrowser
+apt-get install cmus
 
 # Installs video
 apt-get install vlc
-apt-get remove mplayer
-apt-get remove parole
 add-apt-repository ppa:mc3man/trusty-media
 apt-get update
 apt-get install gstreamer0.10-ffmpeg
@@ -96,35 +82,12 @@ apt-get install gstreamer0.10-ffmpeg
 # Installs chat
 apt-get install pidgin
 apt-get install hexchat
-apt-get remove empathy
-apt-get remove xchat
 
 # Install text editors
-apt-get install mousepad
 apt-get install vim
 add-apt-repository ppa:webupd8team/sublime-text-3
 apt-get update
 apt-get install sublime-text-installer
-vim /opt/sublime_text/sublime_text
-# Run the following in vim
-# :%!xxd
-# :%s/7001 0000 8a9b b800 0000 e87f 3f00 0048/7001 0000 90b3 0190 9090 e87f 3f00 0048/
-# :%!xxd -r
-# :wq
-# Paste the following into the license box
-# - BEGIN LICENSE -
-# Sinosky
-# Unlimited User License
-# EA7E-17525
-# C14974DF6829CA02CA9C0D9D53ED6D17
-# 0B753302A37BA6997616AC6A88FF69C8
-# E62B834C8250634C2A7E5E5D0BE3A284
-# 756FD4E2B4FEAC1775868B78E8ACC70C
-# F7AA16FF7894A0E3F6B1DBCA940D20A6
-# 3C86FC4CB4EFE4B55FC65846AB8C129F
-# EF9EBEA0476ECAD25CDE43FB6EB3F211
-# 497120783280FAE7DFA8CEAB405EFECD
-# - END LICENSE -
 
 # Installs torrent
 apt-get install transmission-gtk
@@ -134,7 +97,6 @@ mkdir /home/josh/Downloads/Torrents
 apt-get install texmaker
 apt-get install octave
 apt-get install stellarium
-apt-get install gperiodic
 apt-get install geogebra
 
 # Allsorted
