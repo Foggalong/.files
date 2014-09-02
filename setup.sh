@@ -15,6 +15,8 @@ apt-get autoremove
 # Installs i3
 apt-get install xinit
 apt-get install i3
+apt-get install i3lock
+apt-get install conky
 
 # Installs audio
 apt-get install alsa-base
@@ -24,6 +26,9 @@ apt-get install gstreamer0.10-alsa
 apt-get install libasound2
 apt-get install libasound2-plugins
 alsactl init
+
+# Installs terminal
+apt-get install terminator
 
 # Checks 'wget' is installed
 apt-get install wget
@@ -60,9 +65,6 @@ git config --global user.name "Joshua Fogg"
 git config --global user.email "joshua.h.fogg@gmail.com"
 git config --global credential.helper cache
 git config --global credential.helper 'cache --timeout=14400'
-
-# Installs terminal
-apt-get install terminator
 
 # Installs office
 apt-get install libreoffice
