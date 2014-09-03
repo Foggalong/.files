@@ -44,3 +44,14 @@ apt-get update
 apt-get install firefox
 apt-get upgrade
 wget http://deb.opera.com/opera-developer/pool/non-free/o/opera-developer/opera-developer_25.0.1606.0_amd64.deb
+
+# Themeing
+add-apt-repository ppa:numix/ppa
+apt-get update
+apt-get install numix-gtk-theme
+
+# Installs email
+apt-get install thunderbird
+
+# Installs ownCloud client
+apt-get install owncloud-client
