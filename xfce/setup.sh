@@ -71,3 +71,10 @@ apt-get install libreoffice
 apt-get install myspell-en-gb
 apt-get remove abiword
 apt-get remove gnumeric
+
+# Installs video
+apt-get install vlc
+add-apt-repository ppa:mc3man/trusty-media
+apt-get update
+apt-get install gstreamer0.10-ffmpeg
+apt-get remove parole
