@@ -50,8 +50,24 @@ add-apt-repository ppa:numix/ppa
 apt-get update
 apt-get install numix-gtk-theme
 
+# Installs plank
+add-apt-repository ppa:ricotz/docykr
+apt-get update
+apt-get install plank
+
+# Updates whisker menu
+add-apt-repository ppa:gottcode/gcppa
+apt-get update
+apt-get install xfce4-whiskermenu-plugin
+
 # Installs email
 apt-get install thunderbird
 
 # Installs ownCloud client
 apt-get install owncloud-client
+
+# Installs office
+apt-get install libreoffice
+apt-get install myspell-en-gb
+apt-get remove abiword
+apt-get remove gnumeric
