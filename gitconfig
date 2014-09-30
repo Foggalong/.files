@@ -1,5 +1,0 @@
-[user]
-	name = Foggalong
-	email = joshua.h.fogg@gmail.com
-[credential]
-	helper = cache --timeout=14400
