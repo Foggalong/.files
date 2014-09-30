@@ -85,12 +85,22 @@ if [ -x /usr/bin/dircolors ]; then
 fi
 
 # User specific aliases
-alias full-upgrade='sudo apt-get update && sudo apt-get upgrade && sudo apt-get dist-upgrade && sudo apt-get autoremove'
 alias pipes='./.local/bin/pipes.sh' 
 alias pong='ping google.com -c 3'
 
 # User specific functions
-function say() { mplayer -really-quiet "http://translate.google.com/translate_tts?tl=en&q=$*"; }
+# Speech synthesis
+function say() {
+    mplayer -really-quiet "http://translate.google.com/translate_tts?tl=en&q=$*";
+}
+# Full Upgrade
+function full-upgrade() {
+    sudo apt-get update
+    udo apt-get upgrade
+    sudo apt-get dist-upgrade
+    sudo apt-get autoremove
+    sudo apt-get clean
+}
 
 
 # some more ls aliases

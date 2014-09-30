@@ -1,0 +1,3 @@
+[submodule "pipes.sh"]
+	path = pipes.sh
+	url = https://github.com/livibetter/pipes.sh.git
