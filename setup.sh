@@ -146,14 +146,13 @@ ln -s -f .files/pipes.sh/pipes.sh /usr/bin/pipes
 ln -s -f .files/info.sh/info.sh /usr/bin/info.sh
 
 # Config symlinks
-ln -s -f .files/config/bashrc .bashrc
-ln -s -f .files/config/gitconfig .config
+ln -s -f .files/config/bashrc .bashrc && chown josh .bashrc
+ln -s -f .files/config/gitconfig .gitconfig && chown josh .gitconfig
 ln -s -f .files/config/transmission/*.json .config/transmission/
 ln -s -f .files/config/thunar .config/Thunar/uca.xml
 ln -s -f .files/config/hexchat/*.conf .config/hexchat/
-
-# Sublime
 ln -s -r -f  .files/config/sublime ~/.config/sublime-text-3/Installed\ Packages/
+chown -R josh .config
 
 # ownCloud
 # music changed within rhythmbox
