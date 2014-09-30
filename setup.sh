@@ -1,5 +1,8 @@
 #!/bin/bash
 
+# This is the setup script which manages all my config
+# files post install ation
+
 
 # Basic Functions
 # ===============
@@ -16,6 +19,7 @@ function aptPPA() {
 	add-apt-repository -y "$1"
 	apt-get update
 }
+
 
 # Pre-flight Checks
 # =================
@@ -90,6 +94,7 @@ aptREM xnoise
 aptINS libreoffice
 aptINS myspell-en-gb
 aptINS texmaker
+aptINS owncloud-client
 aptREM abiword
 aptREM gnumeric
 
@@ -144,3 +149,13 @@ ln -s -f .files/info.sh/info.sh /usr/bin/info.sh
 ln -s -f .files/config/bashrc .bashrc
 ln -s -f .files/config/gitconfig .config
 ln -s -f .files/config/transmission/*.json .config/transmission/
+ln -s -f .files/config/thunar .config/Thunar/uca.xml
+ln -s -f .files/config/hexchat/*.conf .config/hexchat/
+
+# Sublime
+ln -s -r -f  .files/config/sublime ~/.config/sublime-text-3/Installed\ Packages/
+
+# ownCloud
+# music changed within rhythmbox
+# podcasts changed within rhythmbox
+# ln -s -r -f ownCloud/ .local/share/notes/Notes

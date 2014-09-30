@@ -1,6 +1,0 @@
-[submodule "pipes.sh"]
-	path = pipes.sh
-	url = https://github.com/livibetter/pipes.sh.git
-[submodule "hardcode-fixer"]
-	path = hardcode-fixer
-	url = https://github.com/Foggalong/hardcode-fixer.git
