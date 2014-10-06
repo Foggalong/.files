@@ -137,7 +137,7 @@ rm -r Templates
 rm -r Public
 
 # .files
-git clone https://github.com/Foggalong/.files.git
+git clone --recursive git://github.com/Foggalong/.files.git
 chown -R josh .files
 
 # Program symlinks
