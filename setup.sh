@@ -7,18 +7,9 @@
 # Basic Functions
 # ===============
 
-function aptINS() {
-	apt-get -y install "$1"
-}
-
-function aptREM() {
-	apt-get -y remove "$1"
-}
-
-function aptPPA() {
-	add-apt-repository -y "$1"
-	apt-get update
-}
+function aptINS() { apt-get -y install "$1"; }
+function aptREM() { apt-get -y remove "$1"; }
+function aptPPA() { add-apt-repository -y "$1"; apt-get update; }
 
 
 # Pre-flight Checks
