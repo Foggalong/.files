@@ -152,6 +152,7 @@ ln -s -f /hone/josh/.files/config/transmission/*.json .config/transmission/
 ln -s -f /home/josh/.files/config/thunar .config/Thunar/uca.xml
 ln -s -f /home/josh/.files/config/hexchat/*.conf .config/hexchat/
 ln -s -r -f  /home/josh/.files/config/sublime ~/.config/sublime-text-3/Installed\ Packages
+ln -s -f /home/josh/.files/config/vimrc .vimrc && chown josh .vimrc
 chown -R josh .config
 
 # ownCloud
