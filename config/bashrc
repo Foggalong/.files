@@ -96,7 +96,7 @@ function say() {
 # Full Upgrade
 function full-upgrade() {
     sudo apt-get update
-    udo apt-get upgrade
+    sudo apt-get upgrade
     sudo apt-get dist-upgrade
     sudo apt-get autoremove
     sudo apt-get clean
