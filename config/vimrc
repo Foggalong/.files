@@ -1,22 +1,44 @@
+" Geberal
+" -------
+
+" Show line numbers
 set number
-set nowrap	
-set showbreak=+++
-set textwidth=100
+" Don't wrap lines
+set nowrap
+" Highlight matching braces
 set showmatch
+" Flash screen on errors
 set errorbells
+" Use visual bell (no beep)
 set visualbell
- 
+
+" Highlight all search results
 set hlsearch
+" Enable smart-case search
 set smartcase
+" Always case insensitive
 set ignorecase
+" Search for strings incrementally
 set incsearch
  
+" Automatically indent new lines
 set autoindent
+" Uses spaces, not tabs
 set expandtab
+" Use 4 spaces for each tab
 set shiftwidth=4
+" Enables smart indenting
 set smartindent
+" Enables smart tabs
 set smarttab
+" Use 4 spaces for earch tab
 set softtabstop=4
 
+
+" Advances
+" ========
+
+" Show row and column information
 set ruler
+" Number of undo levels
 set undolevels=1000
