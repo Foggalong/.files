@@ -1,4 +1,6 @@
 [global_config]
+  title_receive_bg_color = "#398ee7"
+  title_transmit_bg_color = "#d64937"
   borderless = True
 [keybindings]
 [profiles]
@@ -9,7 +11,6 @@
     background_type = transparent
     background_image = None
     foreground_color = "#b3b3b3"
-    show_titlebar = False
     background_color = "#2d2d2d"
     scrollback_infinite = True
 [layouts]
