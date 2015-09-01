@@ -1,7 +1,7 @@
 #!/bin/bash
 
 # This is the setup script which manages all my config
-# files post install ation
+# files post install action for Ubuntu Core.
 
 
 # Basic Functions
