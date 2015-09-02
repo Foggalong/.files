@@ -86,7 +86,7 @@ fi
 
 # User specific aliases
 alias pipes='./.local/bin/pipes.sh' 
-alias pong='ping google.com -c 3'
+alias pong='ping -c 3 8.8.8.8'
 
 # User specific functions
 # Speech synthesis
