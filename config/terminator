@@ -7,9 +7,10 @@
   [[default]]
     scrollbar_position = hidden
     palette = "#2e3436:#cf4435:#4e9a06:#d1ab00:#2e87c2:#844c9c:#16a387:#d3d7cf:#555753:#e74c3c:#8ae234:#f1c40f:#3498db:#9b59b6:#1abc9c:#eeeeec"
+    background_image = None
     background_darkness = 0.84
     background_type = transparent
-    background_image = None
+    use_system_font = False
     foreground_color = "#b3b3b3"
     background_color = "#2d2d2d"
     scrollback_infinite = True

@@ -146,8 +146,9 @@ mode "resize" {
 
 bindsym $mod+r mode "resize"
 
-# Enables compositing
+# Enables compositing & wallpaper
 exec compton 
+exec feh --bg-fill /home/josh/ownCloud/Photos/Wallpaper/simpledesktops.com
 
 # i3-gaps variables
 for_window [class="^.*"] border pixel 0
@@ -161,4 +162,5 @@ exec redshift-gtk
 exec skype
 exec transmission-gtk -m
 exec hexchat --minimize=2
+exec pidgin
 
