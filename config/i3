@@ -164,3 +164,6 @@ exec transmission-gtk -m
 exec hexchat --minimize=2
 exec pidgin
 
+# Makes sure certain windows float
+for_window [class="Xfce4-appfinder" instance="xfce4-appfinder"] floating enable
+
