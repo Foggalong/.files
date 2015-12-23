@@ -15,7 +15,7 @@ set $mod Mod4
 # is used in the bar {} block below.
 # This font is widely installed, provides lots of unicode glyphs, right-to-left
 # text rendering and scalability on retina/hidpi displays (thanks to pango).
-font pango:DejaVu Sans Mono 8
+font pango:Droid Sans Mono 8
 # Before i3 v4.8, we used to recommend this one as the default:
 # font -misc-fixed-medium-r-normal--13-120-75-75-C-70-iso10646-1
 # The font above is very space-efficient, that is, it looks good, sharp and
@@ -36,9 +36,9 @@ bindsym $mod+Shift+q kill
 bindsym $mod+d exec dmenu_run
 
 # Screenshooter Tools
-bindsym Print exec xfce4-screenshooter -f
-bindsym $mod+Print exec xfce4-screenshooter -w
-bindsym $mod+Shift+Print exec xfce4-screenshooter -r
+bindsym Print exec scrot -q 100
+bindsym $mod+Print exec scrot -u -q 100
+bindsym $mod+Shift+Print exec scrot -s -q 100
 
 # change focus
 bindsym $mod+j focus left
@@ -147,19 +147,8 @@ mode "resize" {
 
 bindsym $mod+r mode "resize"
 
-# Amixer Volume Controls
-bindsym $mod+equal exec --no-startup-id amixer set Master -q 5%+ # increase volume
-bindsym $mod+minus exec --no-startup-id amixer set Master -q 5%- # decrease volume
-bindsym $mod+BackSpace exec --no-startup-id amixer -D pulse set Master 1+ toggle # toggle mute
-
-# Media Player Controls
-bindsym $mod+m exec playerctl play-pause
-bindsym $mod+period exec playerctl next
-bindsym $mod+comma exec playerctl previous
-
 # Enables compositing & wallpaper
-exec compton 
-exec feh --bg-fill /home/josh/ownCloud/Photos/Wallpaper/simpledesktops.com
+exec feh --bg-fill /home/josh/Pictures/wallpaper.png
 
 # i3-gaps variables
 for_window [class="^.*"] border pixel 0
@@ -167,11 +156,13 @@ gaps inner 10
 gaps outer 0
 
 # Autostart Applications
+# apps go here
 
 # Makes sure certain windows float
 for_window [class="Xfce4-appfinder" instance="xfce4-appfinder"] floating enable
 
 bar {
-	status_command i3status
-	tray_output primary
+	position 	top
+	status_command 	i3status
+	tray_output 	primary
 }
