@@ -36,9 +36,9 @@ bindsym $mod+Shift+q kill
 bindsym $mod+d exec dmenu_run
 
 # Screenshooter Tools
-bindsym Print exec scrot -q 100
-bindsym $mod+Print exec scrot -u -q 100
-bindsym $mod+Shift+Print exec scrot -s -q 100
+bindsym Print exec scrot -q 100 -e 'mv $f ~/Pictures/scrots/'
+bindsym $mod+Print exec scrot -u -q 100 -e 'mv $f ~/Pictures/scrots/'
+bindsym $mod+Shift+Print exec scrot -s -q 100 -e 'mv $f ~/Pictures/scrots/'
 
 # change focus
 bindsym $mod+j focus left
