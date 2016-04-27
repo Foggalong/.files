@@ -160,7 +160,7 @@ bindsym $mod+comma exec playerctl previous
 
 # Enables compositing & wallpaper
 exec compton 
-exec feh --bg-fill /home/josh/ownCloud/Photos/Wallpaper/simpledesktops.com
+exec feh --bg-fill /home/josh/ownCloud/Photos/Wallpaper/simpledesktops.png
 
 # i3-gaps variables
 for_window [class="^.*"] border pixel 0

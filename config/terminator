@@ -7,6 +7,7 @@
   title_receive_fg_color = "#f9f9f9"
   title_inactive_bg_color = "#333333"
 [keybindings]
+  edit_window_title = <Shift>F2
 [profiles]
   [[default]]
     scrollbar_position = hidden
@@ -15,6 +16,7 @@
     background_darkness = 0.84
     background_type = transparent
     use_system_font = False
+    split_to_group = True
     foreground_color = "#b3b3b3"
     background_color = "#2d2d2d"
     scrollback_infinite = True
