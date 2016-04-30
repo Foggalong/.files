@@ -1,8 +1,47 @@
 ! Xresources file
 
-URxvt.scrollBar: false
+! Font Settings
+URxvt.scrollBar: False
+URxvt.font: xft:Noto Mono:size=9
+URxvt.boldFont:
 
-URxvt*inheritPixmap: true
-URxvt*.transparent: true
 ! URxvt*.shading: 0 to 99 darkens, 101 to 200 lightens
-URxvt*.shading: 150 
+URxvt*.transparent: true
+URxvt*.shading: 30 
+
+! Special
+*.foreground:   #B3B3B3
+*.background:   #2D2D2D
+*.cursorColor:  #B3B3B3
+
+! Black
+*.color0:       #2E3436
+*.color8:       #555753
+
+! Red
+*.color1:       #CF4435
+*.color9:       #E74C3C
+
+! Green
+*.color2:       #4E9A06
+*.color10:      #8AE234
+
+! Yellow
+*.color3:       #D1AB00
+*.color11:      #F1C40F
+
+! Blue
+*.color4:       #2E87C2
+*.color12:      #3498DB
+
+! Magenta
+*.color5:       #844C9C
+*.color13:      #9B59B6
+
+! Cyan
+*.color6:       #16A387
+*.color14:      #1ABC9C
+
+! White
+*.color7:       #D3D7CF
+*.color15:      #EEEEEC
