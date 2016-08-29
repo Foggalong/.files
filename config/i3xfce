@@ -158,6 +158,9 @@ bindsym $mod+m exec playerctl play-pause
 bindsym $mod+period exec playerctl next
 bindsym $mod+comma exec playerctl previous
 
+# Load Xresources
+exec xrdb /home/josh/.Xresources
+
 # Enables compositing & wallpaper
 exec compton 
 exec feh --bg-fill /home/josh/ownCloud/Photos/Wallpaper/simpledesktops.png
