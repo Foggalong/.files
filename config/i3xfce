@@ -171,6 +171,9 @@ gaps inner 10
 gaps outer 0
 
 # Autostart Applications
+exec xfce4-panel
+exec owncloud
+exec nm-applet
 exec redshift-gtk
 exec transmission-gtk -m
 
