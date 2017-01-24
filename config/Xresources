@@ -2,17 +2,21 @@
 
 ! Font Settings
 URxvt.scrollBar: False
-URxvt.font: xft:Noto Mono:size=9
-URxvt.boldFont:
+URxvt.font: xft:Inconsolata:size=11
+! URxvt.boldFont:
 
+! Colour Links Differently
+URxvt.matcher.rend.0: Uline Bold fg5
+
+! Transparency Settings
 ! URxvt*.shading: 0 to 99 darkens, 101 to 200 lightens
 ! URxvt*.transparent: true
 ! URxvt*.shading: 30
 
 ! Special
-*.foreground:   #B3B3B3
+*.foreground:   #C3C3C3
 *.background:   #2D2D2D
-*.cursorColor:  #B3B3B3
+*.cursorColor:  #D3D3D3
 
 ! Black
 *.color0:       #2E3436
