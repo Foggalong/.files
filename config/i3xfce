@@ -172,6 +172,7 @@ gaps outer 0
 
 # Autostart Applications
 exec xfce4-panel
+exec dunst
 exec owncloud
 exec nm-applet
 exec redshift-gtk

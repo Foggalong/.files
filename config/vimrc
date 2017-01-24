@@ -35,8 +35,8 @@ set smarttab
 set softtabstop=4
 
 
-" Advances
-" ========
+" Advanced
+" --------
 
 " Show row and column information
 set ruler
