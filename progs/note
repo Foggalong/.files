@@ -1,0 +1,36 @@
+#!/bin/bash
+
+# This script gives me some shortcuts for managing my notes. The text ones are
+# all stored in markdown format so the script is hardcoded to the .md filetype
+# for now. There are some PNG files in there too, but I'll have to think about
+# how I'm gonna deal with them later.
+
+dir="/home/josh/ownCloud/Notes/"
+bin="/home/josh/.local/share/Trash/"
+
+exists () {
+    if [ ! -f $dir$1.md ]; then
+        echo "Note not found!"
+        exit 1
+    else
+        return 0
+    fi
+}
+
+if [ "$1" = "-d" ] || [ "$1" = "--delete" ]; then
+    if exists $2; then
+        echo "Deleting $2"
+        gvfs-trash $dir$2.md
+    fi
+elif [ "$1" = "-o" ] || [ "$1" = "--open" ]; then
+    if exists $2; then
+        echo "Opening $2"
+        vim $dir$2.md
+    fi
+elif [ "$1" = "" ]; then
+    echo "Please give a flag! See --help/-h"
+    exit 1
+else
+    echo "$1 is not a known flag. See --help/-h"
+    exit 1
+fi
