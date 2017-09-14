@@ -1,0 +1,9 @@
+[Desktop Entry]
+Name=Deliveroo
+Comment=Tracking of Deliveroo orders
+Exec=libreoffice /home/josh/ownCloud/deliveroo.ods
+Icon=web-deliveroo
+Terminal=true
+Type=Application
+Categories=Game;
+StartupNotify=true

@@ -1,0 +1,9 @@
+[Desktop Entry]
+Name=Books
+Comment=Tracking of books read
+Exec=libreoffice /home/josh/ownCloud/books.ods
+Icon=web-kindle
+Terminal=true
+Type=Application
+Categories=Game;
+StartupNotify=true

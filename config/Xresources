@@ -2,7 +2,7 @@
 
 ! Font Settings
 URxvt.scrollBar: False
-URxvt.font: xft:Inconsolata:size=11
+URxvt.font: xft:Inconsolata:size=10
 ! URxvt.boldFont:
 
 ! Colour Links Differently

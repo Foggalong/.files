@@ -1,0 +1,9 @@
+[Desktop Entry]
+Name=Running
+Comment=Tracking of running
+Exec=libreoffice /home/josh/ownCloud/running.ods
+Icon=web-fitbit
+Terminal=true
+Type=Application
+Categories=Game;
+StartupNotify=true

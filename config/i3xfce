@@ -172,11 +172,12 @@ gaps outer 0
 
 # Autostart Applications
 exec xfce4-panel
+exec compton
 exec dunst
-exec owncloud
 exec nm-applet
 exec redshift-gtk
-exec transmission-gtk -m
+# exec transmission-gtk -m
+exec sleep 1 && owncloud
 
 # Makes sure certain windows float
 for_window [class="Xfce4-appfinder" instance="xfce4-appfinder"] floating enable
